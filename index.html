@@ -1,47 +1,244 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formation C#</title>
+    <title>C# — présentation du langage</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="root">
-        <h1>Formation C#</h1>
-        <p>Bienvenue dans la formation C#</p>
-        <h2>Liste des modules</h2>
-        <ol class="modules" id="modules">
-            <li>Module 1</li>
-            <li>Module 2</li>
-            <li>Module 3</li>
-            <li>Module 4</li>
-            <li>Module 5</li>
-            <li>Module 6</li>
-            <li>Module 7</li>
-            <li>Module 8</li>
-            <li>Module 9</li>
-            <li>Module 10</li>
-        </ol>
-        <h2>Liste des exercices</h2>
-        <ul class="exercices" id="exercices">
-            <li>Exercice 1</li>
-            <li>Exercice 2</li>
-            <li>Exercice 3</li>
-            <li>Exercice 4</li>
-            <li>Exercice 5</li>
-            <li>Exercice 6</li>
-            <li>Exercice 7</li>
-        </ul>
-        <h2>Liste des projets</h2>
-        <ol class="projets" id="projets">
-            <li>Projet 1</li>
-            <li>Projet 2</li>
-            <li>Projet 3</li>
-            <li>Projet 4</li>
-            <li>Projet 5</li>
-        </ol>
-    </div>
+    <a class="skip" href="#contenu">Aller au contenu</a>
+
+    <header class="topbar">
+        <a class="brand" href="#accueil">C<span>#</span></a>
+        <nav aria-label="Sections">
+            <a href="#langage">Le langage</a>
+            <a href="#reperes">Repères</a>
+            <a href="#idees">Idées</a>
+            <a href="#code">Code</a>
+            <a href="#usages">Usages</a>
+            <a href="#quiz">Quiz</a>
+        </nav>
+    </header>
+
+    <main id="contenu">
+        <section class="hero" id="accueil">
+            <p class="eyebrow">Formation · introduction</p>
+            <h1>Le langage <span class="word">C<span class="hash">#</span></span></h1>
+            <p class="lead">
+                C# se prononce « C sharp ». C’est un langage généraliste, typé et orienté objet,
+                créé chez Microsoft pour écrire des applications qui tournent sur la plateforme .NET.
+            </p>
+            <dl class="facts">
+                <div>
+                    <dt>Version stable</dt>
+                    <dd>C# 14 avec .NET 10</dd>
+                </div>
+                <div>
+                    <dt>Auteur</dt>
+                    <dd>Anders Hejlsberg, 2000</dd>
+                </div>
+                <div>
+                    <dt>Exécution</dt>
+                    <dd>Compilé, puis runtime .NET</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section id="langage">
+            <div class="section-head">
+                <h2>Ce que désigne C#</h2>
+                <p>Deux noms reviennent tout le temps. Ils ne désignent pas la même chose.</p>
+            </div>
+            <div class="split">
+                <article class="panel">
+                    <h3>C#, le langage</h3>
+                    <p>
+                        C# décrit comment écrire le programme : les types, les classes, les méthodes,
+                        les conditions. Sa syntaxe rappelle Java et C++, avec un point-virgule en fin
+                        d’instruction et des accolades pour les blocs.
+                    </p>
+                    <p>
+                        Le symbole <strong>#</strong> est un clin d’œil au dièse musical.
+                        Un dièse monte la note d’un demi-ton. De la même façon, C++ « incrémente » C,
+                        et C# se place un cran au-dessus.
+                    </p>
+                </article>
+                <article class="panel panel-ink">
+                    <h3>.NET, la plateforme</h3>
+                    <p>
+                        .NET fournit les bibliothèques (fichiers, réseau, collections, web) et le
+                        runtime qui exécute le programme. On écrit en C#. On s’appuie sur .NET.
+                    </p>
+                    <p>
+                        Le même langage sert pour une API web, un outil en ligne de commande,
+                        une application de bureau ou un jeu Unity.
+                    </p>
+                </article>
+            </div>
+
+            <ol class="pipeline" aria-label="Chemin d’un programme C#">
+                <li>
+                    <span>1</span>
+                    <strong>Source</strong>
+                    <p>Fichiers <code>.cs</code></p>
+                </li>
+                <li>
+                    <span>2</span>
+                    <strong>Roslyn</strong>
+                    <p>Le compilateur C#</p>
+                </li>
+                <li>
+                    <span>3</span>
+                    <strong>IL</strong>
+                    <p>Code intermédiaire</p>
+                </li>
+                <li>
+                    <span>4</span>
+                    <strong>Runtime</strong>
+                    <p>Exécution sur .NET</p>
+                </li>
+            </ol>
+        </section>
+
+        <section id="reperes">
+            <div class="section-head">
+                <h2>Quelques repères</h2>
+                <p>Le langage a plus de vingt ans. Chaque version a ajouté une idée devenue courante.</p>
+            </div>
+            <ol class="timeline">
+                <li>
+                    <time datetime="2002">2002</time>
+                    <h3>C# 1.0</h3>
+                    <p>Classes, propriétés, première version avec .NET Framework.</p>
+                </li>
+                <li>
+                    <time datetime="2005">2005</time>
+                    <h3>Génériques</h3>
+                    <p>C# 2.0 : des listes typées, comme <code>List&lt;string&gt;</code>.</p>
+                </li>
+                <li>
+                    <time datetime="2007">2007</time>
+                    <h3>LINQ</h3>
+                    <p>C# 3.0 : interroger des collections avec <code>Where</code> et des lambdas.</p>
+                </li>
+                <li>
+                    <time datetime="2012">2012</time>
+                    <h3>async / await</h3>
+                    <p>C# 5.0 : écrire du code asynchrone qui se lit comme du code synchrone.</p>
+                </li>
+                <li>
+                    <time datetime="2020">2020</time>
+                    <h3>Records</h3>
+                    <p>C# 9 : types concis pour les données, et instructions de premier niveau.</p>
+                </li>
+                <li>
+                    <time datetime="2025">2025</time>
+                    <h3>C# 14</h3>
+                    <p>Version stable actuelle, livrée avec .NET 10. C# 15 est en préversion avec .NET 11.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section id="idees">
+            <div class="section-head">
+                <h2>Six idées à retenir</h2>
+                <p>Ces notions reviennent dans presque tous les programmes C#.</p>
+            </div>
+            <div class="cards">
+                <article>
+                    <h3>Typage statique</h3>
+                    <p>Chaque valeur a un type connu à la compilation. <code>var</code> ne rend rien dynamique : le compilateur déduit le type.</p>
+                </article>
+                <article>
+                    <h3>Objets</h3>
+                    <p>Une classe regroupe des données et des comportements. L’encapsulation passe souvent par des propriétés.</p>
+                </article>
+                <article>
+                    <h3>LINQ</h3>
+                    <p>Filtrer, trier et projeter une collection sans écrire la boucle à la main. Le style est proche d’une requête.</p>
+                </article>
+                <article>
+                    <h3>async / await</h3>
+                    <p>Une opération longue (fichier, réseau) peut rendre la main. <code>await</code> reprend la suite quand le résultat arrive.</p>
+                </article>
+                <article>
+                    <h3>Mémoire gérée</h3>
+                    <p>Le ramasse-miettes libère les objets qui ne sont plus utilisés. On ne libère pas la mémoire à la main, comme en C.</p>
+                </article>
+                <article>
+                    <h3>Multiplateforme</h3>
+                    <p>.NET moderne s’exécute sur Windows, Linux et macOS. Le langage reste le même.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="code">
+            <div class="section-head">
+                <h2>Lire un peu de C#</h2>
+                <p>Huit extraits courts. Chacun tient en une idée, avec le résultat affiché dessous.</p>
+            </div>
+            <div class="studio">
+                <div class="lesson-list" id="lesson-list" role="tablist" aria-label="Extraits de code"></div>
+                <div class="studio-view">
+                    <div class="editor">
+                        <div class="editor-bar">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span id="file-name">Programme.cs</span>
+                        </div>
+                        <pre><code id="code-view" tabindex="0"></code></pre>
+                    </div>
+                    <div class="explain">
+                        <h3 id="lesson-title"></h3>
+                        <p id="lesson-text"></p>
+                        <p class="out-label">Sortie</p>
+                        <pre class="output" id="lesson-output"></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="usages">
+            <div class="section-head">
+                <h2>Où on l’utilise</h2>
+                <p>Un langage, plusieurs formes d’applications. L’outillage habituel est Visual Studio, Visual Studio Code ou la CLI <code>dotnet</code>.</p>
+            </div>
+            <ul class="uses">
+                <li>
+                    <h3>Web</h3>
+                    <p>ASP.NET Core pour les API et les sites. Blazor pour une interface écrite en C#.</p>
+                </li>
+                <li>
+                    <h3>Bureau et mobile</h3>
+                    <p>WPF et WinUI sur Windows. .NET MAUI vise aussi Android, iOS et macOS.</p>
+                </li>
+                <li>
+                    <h3>Jeux</h3>
+                    <p>Unity s’appuie sur C# pour le gameplay, les scènes et les outils.</p>
+                </li>
+                <li>
+                    <h3>Services</h3>
+                    <p>Outils en console, workers et services cloud. Le projet démarre souvent par <code>dotnet new console</code>.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="quiz">
+            <div class="section-head">
+                <h2>Quatre questions</h2>
+                <p>Un passage rapide pour fixer le vocabulaire. La réponse s’affiche tout de suite.</p>
+            </div>
+            <form id="quiz-form" class="quiz"></form>
+            <p class="score" id="quiz-score" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Présentation d’introduction. Repères vérifiés en octobre 2026 : C# 14 est la version stable, avec .NET 10.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
